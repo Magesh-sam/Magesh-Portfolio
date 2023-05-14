@@ -1,0 +1,144 @@
+/* :root {} */
+
+@keyframes spring {
+    0% {
+        transform: scaleY(0.5);
+    }
+
+    50% {
+        transform: scaleY(0.7);
+    }
+
+    75% {
+        transform: scaleY(0.9);
+    }
+
+    100% {
+        transform: scaleY(0.5);
+    }
+}
+
+.home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: space-evenly;
+    padding-left: 75px;
+    gap: 75px;
+    height: 100vh;
+}
+
+.row {
+    display: flex;
+
+}
+
+.hello {
+    font-size: 65px;
+}
+
+
+.name {
+    font-size: 70px;
+    letter-spacing: 10px;
+    width: 70vw;
+}
+
+.letter {
+    -webkit-text-stroke: 0.5rem var(--secondary-bg);
+    color: transparent;
+    transition: all 0.3s ease-in-out;
+}
+.name:hover .letter{
+    color: var(--secondary-bg);
+}
+
+
+.description {
+    font-size: 25px;
+    width: 65%;
+    position: relative;
+}
+
+mark {
+    background: var(--secondary-bg);
+}
+
+.icon-wrap {
+    display: flex;
+    gap: 30px;
+    font-size: 30px;
+
+}
+
+.icon-wrap a {
+    color: var(--primary-text);
+    transition: all 0.3s ease-in-out;
+}
+
+.icon-wrap a:hover {
+    color: var(--secondary-bg);
+
+    scale: 1.2;
+}
+
+.line-wrap {
+    width: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    position: absolute;
+    left: 0;
+    transition: width 0.3s ease-in-out;
+}
+
+.line {
+    border-bottom: 2px solid var(--secondary-bg);
+}
+
+.line-wrap:hover {
+    width: 50px;
+}
+
+
+/* Media Queries */
+
+@media (width<=768px) and (width>500px) {
+
+    .hello {
+        font-size: 40px;
+    }
+
+    .name {
+        font-size: 50px;
+        letter-spacing: 5px;
+    }
+
+    .description {
+        font-size: 20px;
+    }
+
+}
+
+@media (width<=500px) {
+    .home {
+        gap: 35px;
+        padding-left: 45px;
+    }
+
+    .hello {
+        font-size: 28px;
+    }
+
+    .name {
+        font-size: 30px;
+        letter-spacing: 3px;
+        letter-spacing: normal;
+    }
+
+    .description {
+        font-size: 15px;
+        width: 75vw;
+    }
+
+}

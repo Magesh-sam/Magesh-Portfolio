@@ -1,0 +1,109 @@
+.about {
+    padding: 25px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.5fr 1.5fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "heading heading"
+        "about-me skills"
+        "about-me experience";
+
+}
+
+.heading {
+    grid-area: heading;
+    text-align: center;
+    font-size: 70px;
+    font-weight: 100;
+}
+
+.letter {
+    -webkit-text-stroke: 1px var(--secondary-bg);
+    color: transparent;
+    transition: all 0.3s ease-in-out;
+
+}
+.heading:hover .letter{
+    color: var(--secondary-bg);
+}
+
+.about-me {
+    grid-area: about-me;
+    align-self: center;
+    justify-self: center;
+    width: 60%;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    font-size: 20px;
+}
+.about-me p:nth-child(odd){
+    padding: 10px;
+    border-left: 3px solid var(--primary-text);
+}
+.about-me p:nth-child(even){
+    padding: 10px;
+    border-left: 3px solid var(--secondary-bg);
+}
+
+.skills {
+    grid-area: skills;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.wrap{
+    display: flex;
+    gap: 15px;
+}
+.wrap p{
+    border: 1px solid var(--primary-text);
+    padding: 10px 15px;
+}
+.wrap p:hover{
+    background: var(--secondary-bg);
+    color: var(--primary-bg);
+}
+.experience {
+    grid-area: experience;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+}
+
+
+
+@media (width<=1200px )  {
+    .about{
+        display: flex ;
+        flex-direction: column;
+        overflow-x: hidden;
+    }
+    .about-me{
+        flex-direction: row;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        justify-content: center;
+        overflow-x: auto;
+width: 100vw;        
+    }
+    .about-me::-webkit-scrollbar{
+        display: none;
+    }
+    .heading{
+    font-size: 50px;
+
+    }
+}
+
+@media (width<=425px) {
+    .skills{
+        scale: 0.7;
+    }
+}

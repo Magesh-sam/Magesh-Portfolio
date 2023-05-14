@@ -1,0 +1,19 @@
+footer{
+    height: 50px;
+    background: var(--secondary-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--primary-bg);
+    font-size: 15px;
+}
+footer a{
+    color: var(--primary-bg);
+    text-underline-offset: 8px;
+}
+
+@media (width<=425px) {
+    footer{
+        font-size: 8px;
+    }
+}
