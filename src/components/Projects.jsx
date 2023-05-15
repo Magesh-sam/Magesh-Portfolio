@@ -5,6 +5,7 @@ import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 import "../styles/projects.css";
 import project1 from "/carousel/project1.webp";
@@ -14,15 +15,15 @@ import project4 from "/carousel/project4.webp";
 import project5 from "/carousel/project5.webp";
 
 // import required modules
-import { Pagination, Autoplay, EffectCoverflow } from "swiper";
+import { Pagination, Autoplay, EffectCoverflow, Navigation } from "swiper";
 
 export default function Projects() {
   return (
     <section className="projects">
-      <h1 className="project-heading">
+      <h1 data-aos='fade-up' data-aos-easing='ease-in-out' className="project-heading">
         <span className="letter">P</span>rojects
       </h1>
-      <h2 className="featured-projects">
+      <h2 data-aos='fade-right' data-aos-easing='ease-in-out' className="featured-projects">
         <span className="letter">F</span>eatured
         <span className="letter">P</span>rojects
       </h2>
@@ -34,7 +35,7 @@ export default function Projects() {
           clickable: true,
         }}
         modules={[Pagination, Autoplay]}
-        className="mySwiper"
+        className="mySwiper main-project"
       >
         <SwiperSlide>
           <img src={project1} alt="Project 1" />
@@ -198,11 +199,12 @@ export default function Projects() {
           </div>
         </SwiperSlide>
       </Swiper>
-      <h2 className="featured-projects">
+      <h2 data-aos='fade-right' data-aos-easing='ease-in-out' className="featured-projects">
         <span className="letter">O</span>ther <span className="letter">P</span>
         rojects
       </h2>
       <Swiper
+        navigation={true}
         effect={"coverflow"}
         autoplay={{ delay: 1500, disableOnInteraction: false }}
         grabCursor={true}
@@ -215,8 +217,8 @@ export default function Projects() {
           modifier: 1,
           slideShadows: true,
         }}
-        pagination={{ clickable: true ,dynamicBullets: true,}}
-        modules={[EffectCoverflow, Pagination]}
+        pagination={{ clickable: true ,}}
+        modules={[EffectCoverflow, Pagination,  Navigation]}
         className="mySwiper"
       >
         <SwiperSlide className="other-project">

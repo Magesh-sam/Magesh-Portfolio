@@ -49,7 +49,8 @@
     color: transparent;
     transition: all 0.3s ease-in-out;
 }
-.name:hover .letter{
+
+.name:hover .letter {
     color: var(--secondary-bg);
 }
 
@@ -82,23 +83,6 @@ mark {
     scale: 1.2;
 }
 
-.line-wrap {
-    width: 30px;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    position: absolute;
-    left: 0;
-    transition: width 0.3s ease-in-out;
-}
-
-.line {
-    border-bottom: 2px solid var(--secondary-bg);
-}
-
-.line-wrap:hover {
-    width: 50px;
-}
 
 
 /* Media Queries */

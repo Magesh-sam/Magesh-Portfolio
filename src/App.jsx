@@ -6,7 +6,10 @@ import { Home } from "./components/Home";
 import { About } from "./components/About";
 import Projects from "./components/Projects";
 import { Footer } from "./components/Footer";
-
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+// ..
+AOS.init();
 export const App = () => {
   const [openMenu, setOpenMenu] = useState(false);
   const menuRef = useRef();
