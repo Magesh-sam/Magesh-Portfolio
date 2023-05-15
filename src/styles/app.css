@@ -140,4 +140,8 @@ body {
 .menu-item:hover::before {
   transform: scaleX(1);
 }
+.contact-item{
+  color: var(--primary-bg);
+  text-decoration: none;
+}
 

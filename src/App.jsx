@@ -98,6 +98,9 @@ export const App = () => {
                 Projects
               </Link>
             </motion.li>
+            <motion.li className="menu-item" variants={linkVariants}>
+              <a className="contact-item" href="mailto:mageshkannanam@gmail.com">Contact</a>
+            </motion.li>
           </motion.ul>
         )}
       </div>
